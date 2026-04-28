@@ -1,4 +1,4 @@
-# artanis-infra
+# artanis-public-infra
 
 AWS CDK code for self-hosted Artanis. This repo is a manual mirror of the `infra/` directory in the private Artanis source repo, refreshed at each release tag.
 
