@@ -187,5 +187,9 @@ export class ArtanisStack extends cdk.Stack {
     });
     new cdk.CfnOutput(this, "S3BucketName", { value: bucket.bucketName });
     new cdk.CfnOutput(this, "RdsEndpoint", { value: db.instanceEndpoint.hostname });
+    new cdk.CfnOutput(this, "InternalApiSecretArn", {
+      value: internalApiSecret.secretArn,
+      description: "ARN of the auto-generated INTERNAL_API_SECRET (use with /api/admin/diagnose)",
+    });
   }
 }
