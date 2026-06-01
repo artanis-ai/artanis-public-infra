@@ -152,6 +152,8 @@ export class ArtanisStack extends cdk.Stack {
       circuitBreaker: { rollback: false },
     });
 
+    service.loadBalancer.setAttribute("idle_timeout.timeout_seconds", "300");
+
     service.targetGroup.configureHealthCheck({
       path: "/api/py/health",
       interval: cdk.Duration.seconds(30),
